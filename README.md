@@ -10,6 +10,9 @@ USED TECHNOLIGIES:
 
 To open project locally fork repository, clone it and run
 `npm start`
+The project will open automatically in browser, if not - check the page manually:
 
-(additinally update NPM dependecies, if neede with
+Open http://localhost:3000/ in your browser
+
+(additinally update NPM dependecies, if needed with
 `npm install`)
