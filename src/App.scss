@@ -1,0 +1,272 @@
+$back-app-color: #12122D;
+$back-tab-color: #333348;
+$back-button-color: #52519D;
+$back-active-color: deeppink;
+$color-text:white;
+
+.html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+
+  background-color: $back-app-color;
+  background-size: cover;
+}
+
+.App {
+  width: 100%;
+  height: 120vh;
+
+  background-color: $back-app-color;
+  
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 225px 35px;
+  }
+
+  &__logo {
+    color: $color-text;
+  }
+
+  &__search {
+    color: $color-text;
+    border: none;
+    border-radius: 40px;
+    background-color: $back-tab-color;
+
+    &::placeholder {
+      color: $color-text;
+    }
+  }
+
+  &__body {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    width: 900px;
+    height: 70vh;
+
+    color: $color-text;
+    border-color: $back-app-color;
+
+    @media (max-width: 780px) {
+      grid-template-columns: repeat(2, 200px);
+      width: 400px;
+      margin-bottom: 150px;
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(2, 200px);
+      width: 400px;
+      margin-bottom: 160px;
+    }
+
+    &--width-post {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      width: 1250px;
+      justify-content: start;
+      gap: -10px;
+
+      color: $color-text;
+      border-color: $back-app-color;
+
+      @media (max-width: 780px) {
+        grid-template-columns: repeat(2, 300px);
+        width: 700px;
+      }
+
+      @media (max-width: 450px) {
+        grid-template-columns: repeat(2, 100px);
+        width: 200px
+      }
+    }
+  }
+
+  &__card {
+    margin-bottom: 30px;
+    padding-top: 50px;
+    width: 320px;
+    height: 220px;
+    text-align: center;
+
+    border: 1px solid $back-app-color;
+    border-radius: 40px;
+    background-color: $back-tab-color;
+
+    @media (max-width: 780px) {
+      width: 200px;
+
+    }
+
+    &--width-post {
+      height: 220px;
+      width: 250px;
+
+      @media (max-width: 780px) {
+        display: none;
+      }
+    }
+  }
+
+  &__post {
+    margin: 0 0 0 -140px;
+    padding: 50px;
+    width: 500px;
+    height: min-content;
+    text-align: center;
+
+    border: 1px solid $back-app-color;
+    border-radius: 40px;
+    background-color: $back-tab-color;
+
+    @media (max-width: 780px) {
+      position: absolute;
+      top: 220px;
+      left: 180px;
+      margin: 0 auto;
+
+      width: 400px;
+    }
+
+    @media (max-width: 550px) {
+      position: absolute;
+      top: 100px;
+      left: 0px;
+      margin: 0;
+
+      width: 77.4%;
+      border-radius: 40px 40px 0 0;
+    }
+
+  }
+
+  &__info {
+    padding: 11px 0 0 0;
+
+    &--button {
+      margin: 20px auto;  
+      width: 200px;
+      padding: 10px;
+
+      background-color: $back-button-color;
+      border-radius: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media (max-width: 550px) {
+        margin: 0 auto;
+        padding: 10px;
+        width: 60px;
+      }
+
+      @media (max-width: 780px) {
+        margin: 0 auto;
+        padding: 10px;
+        width: 85px;
+      }
+    }
+  }
+
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 380px);
+  width: 600px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 250px);
+    gap: 10px;
+    width: 500px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 200px);
+    gap: 1px;
+    width: 400px;
+  }
+}
+
+.post {
+  &__title {
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  &__body {
+    font-size: 13px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__button {
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    border-radius: 40px;
+    width: 100px;
+
+    color: $color-text;
+    background-color: $back-active-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 225px 35px;
+  color: $color-text;
+
+  background-color: $back-app-color;
+
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+
+  &__point {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+
+  &--button {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+
+    background-color: $back-button-color;
+    border-radius: 40px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+}
+
+.active-color {
+  background-color: $back-active-color;
+}
